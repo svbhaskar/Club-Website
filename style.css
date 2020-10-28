@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #f2f2f2;
+}
+nav{
+  background: #1b1b1b;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #1b1b1b;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: rgb(10, 31, 153);
+  border-radius: 15px;
+  box-shadow:  0 0 5px #0d19c2,
+               0 0 10px #0310c4;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid rgb(6, 10, 240);
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 250px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 250px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: rgb(66, 56, 161);
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.content{
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+/*.arrow:after {
+  content: '   \2193';
+
+}*/
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #0f1563;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.container1{
+  background-color: #0f1563;
+  height: 400px;
+}
+.cnt1_txt{
+  color: white;
+  /*float: right;*/
+  font-family: 'Annie Use Your Telescope';font-size: 50px;
+}
+
+.cnt1_spn{
+  /*position:relative;*/
+  bottom: -210px;
+  font-size: 50px;
+  color: white;
+}
+.cnt1_spn1{
+  /*position:relative;*/
+  bottom: -212;
+  font-size: 90px;
+  left: -3;
+  color: white;
+}
+.container2{
+  height: 620px;
+}
+.typewriter{
+  font-size: 13px;
+}
+
+hr.dash{
+  border-top: 3px solid #bbb;
+  height: 150px;
+}
+.empt{
+  height: 150px;
+}
+.txt_logo
+{
+  height: 140px;
+  background-color:  #0f1563;
+}  
+.typewriter h1 {
+    color: #0f1563;
+    font-family: monospace;
+    overflow: hidden; 
+    border-right: .15em solid  #0f1563; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .32em; 
+    animation: 
+      typing 5.5s steps(50, end),
+      blink-caret .5s  infinite;
+  }
+  
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0f1563 }
+  }
+
+.pro_h1{
+    color:#0f1563;
+    margin: auto;
+    text-align: center;
+    font-size: 70px;
+  }
+
+
+
+.flip-card1 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  perspective: 1000px;
+}
+
+.flip-card-inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card1:hover .flip-card-inner1 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front1, .flip-card-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front1 {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back1 {
+  background-color:#0f1563;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* .flip_p1{
+  margin: auto;
+  top: 50px;
+} */
+
+  /* .flip-card1 {
+  float: left;
+  width: 25%;
+  padding: 0 10px; } */
+
+
+
+/* .cards {margin: 30px; float: left;} */
+
+
+/* .cards:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+@media screen and (max-width: 600px) {
+  .flip-card1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} 
+
+
+/* .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+} */
+
+.intern_cards {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+}
+
+.intern_cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.intern_cards {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.intern_cards:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card_inner {
+  float: left;
+  width: 385%;
+  margin:25px;
+}
