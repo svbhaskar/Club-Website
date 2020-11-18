@@ -10,6 +10,7 @@
 body{
   background: #f2f2f2;
 }
+/* Navigation Bar Start */
 nav{
   background: #1b1b1b;
 }
@@ -47,7 +48,7 @@ nav ul li a{
 }
 nav ul li a:hover{
   color: rgb(10, 31, 153);
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow:  0 0 5px #0d19c2,
                0 0 10px #0310c4;
 }
@@ -169,24 +170,23 @@ nav ul ul ul li{
   transform: translate(-50%,-50%);
   text-align: center;
 }
+
+/* Navigation Bar end */
 header{
   font-size: 35px;
   font-weight: 600;
   padding: 10px 0;
 }
 
-/*.arrow:after {
-  content: '   \2193';
 
-}*/
-
-.progress-container {
+/* Progress Bar */
+.progress_container {
   width: 100%;
   height: 5px;
   background: #ccc;
 }
 
-.progress-bar {
+.progress_bar {
   height: 5px;
   background: #0f1563;
   width: 0%;
@@ -202,6 +202,7 @@ header{
 .container1{
   background-color: #0f1563;
   height: 400px;
+  width: 100%;
 }
 .cnt1_txt{
   color: white;
@@ -242,40 +243,44 @@ hr.dash{
   background-color:  #0f1563;
 }  
 .typewriter h1 {
+    margin: auto;
+    align-items: center;
     color: #0f1563;
     font-family: monospace;
-    overflow: hidden; 
-    border-right: .15em solid  #0f1563; 
-    white-space: nowrap; 
-    margin: 0 auto;
-    letter-spacing: .32em; 
-    animation: 
-      typing 5.5s steps(50, end),
-      blink-caret .5s  infinite;
+    font-size: 40px;
+    width: 100%;
+      /* overflow: hidden; 
+      border-right: .15em solid  #0f1563; 
+      white-space: nowrap; 
+      margin: 0 auto;
+      letter-spacing: .32em; 
+      animation: 
+        typing 5.5s steps(300, end),
+        blink-caret .5s  infinite;
+    }
+    
+    
+  @keyframes typing {
+      from { width: 0 }
+      to { width: 100% } */
   }
   
   
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  
-@keyframes blink-caret {
+/* @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #0f1563 }
-  }
+  } */
 
-.pro_h1{
+h1.pro_h1{
     color:#0f1563;
+    position: relative;
     margin: auto;
     text-align: center;
     font-size: 70px;
   }
 
-
-
 .flip-card1 {
+  /* border-radius: 15px; */
   background-color: transparent;
   width: 300px;
   height: 300px;
@@ -315,27 +320,6 @@ hr.dash{
   color: white;
   transform: rotateY(180deg);
 }
-/* .flip_p1{
-  margin: auto;
-  top: 50px;
-} */
-
-  /* .flip-card1 {
-  float: left;
-  width: 25%;
-  padding: 0 10px; } */
-
-
-
-/* .cards {margin: 30px; float: left;} */
-
-
-/* .cards:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
 
 @media screen and (max-width: 600px) {
   .flip-card1 {
@@ -346,12 +330,7 @@ hr.dash{
 } 
 
 
-/* .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-} */
+
 
 .intern_cards {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -367,9 +346,10 @@ hr.dash{
   padding: 2px 16px;
 }
 
-.intern_cards {margin: 0 -5px;}
+.intern_cards {margin: 0 -5px;
+width: 100%;}
 
-/* Clear floats after the columns */
+
 .intern_cards:after {
   content: "";
   display: table;
@@ -378,6 +358,7 @@ hr.dash{
 
 .card_inner {
   float: left;
-  width: 385%;
-  margin:25px;
+  width: 25%;
+  /* margin:25px; */
+  padding:10px;
 }
